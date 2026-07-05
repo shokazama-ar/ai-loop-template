@@ -1,0 +1,34 @@
+name: AI Validation
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate knowledge structure
+        run: |
+          echo "Checking required directories..."
+          test -d knowledge/defines || (echo "ERROR: knowledge/defines missing" && exit 1)
+          test -d knowledge/rules   || (echo "ERROR: knowledge/rules missing"   && exit 1)
+          test -d knowledge/adr     || (echo "ERROR: knowledge/adr missing"     && exit 1)
+          test -d flow/tasks        || (echo "ERROR: flow/tasks missing"        && exit 1)
+          test -d loop/feedback     || (echo "ERROR: loop/feedback missing"     && exit 1)
+          echo "Structure OK"
+
+      - name: Validate task files
+        run: |
+          echo "Checking task files format..."
+          for f in flow/tasks/*.md; do
+            [ "$f" = "flow/tasks/task-template.md" ] && continue
+            grep -q "^# Task:" "$f" || (echo "ERROR: $f missing '# Task:' header" && exit 1)
+            grep -q "^## Goal" "$f"  || (echo "ERROR: $f missing '## Goal' section" && exit 1)
+          done
+          echo "Task files OK"
