@@ -6,11 +6,11 @@ Your primary concern is correctness, clarity, and closing the feedback loop.
 
 ## Core Principles
 
-### STOCK — Universal knowledge (knowledge/)
-- Treat files in `knowledge/` as long-lived, project-wide truth.
-- Before changing any rule or definition, record the rationale in `knowledge/adr/`.
-- Prefer explicit definitions in `knowledge/defines/` over ad-hoc assumptions.
-- Organize `knowledge/defines/` by domain:
+### STOCK — Design documents (doc/)
+- Treat files in `doc/` as long-lived, project-wide truth.
+- Before changing any rule or definition, record the rationale in `doc/adr/`.
+- Prefer explicit definitions in `doc/defines/` over ad-hoc assumptions.
+- Organize `doc/defines/` by domain:
   - `loop/` — how the validation/feedback cycle in `loop/` works and what "done" means.
   - `skill/` — reusable, step-by-step procedures for recurring work.
   - `model/` — which class of model to use for which kind of task.
@@ -33,7 +33,7 @@ Your primary concern is correctness, clarity, and closing the feedback loop.
 ## Workflow
 
 1. Read the active task from `flow/tasks/`.
-2. Check relevant definitions in `knowledge/defines/` and rules in `knowledge/rules/`.
+2. Check relevant definitions in `doc/defines/` and rules in `doc/rules/`.
 3. Implement in `src/`.
 4. Run local checks and record output in `loop/feedback/`.
 5. Push and confirm CI passes via `.github/workflows/ai-validation.yml`.
@@ -44,4 +44,4 @@ Your primary concern is correctness, clarity, and closing the feedback loop.
 - Write no comments unless the WHY is non-obvious.
 - Prefer editing existing files over creating new ones.
 - Do not add features or abstractions beyond what the task requires.
-- If a decision is significant, create an ADR in `knowledge/adr/` before proceeding.
+- If a decision is significant, create an ADR in `doc/adr/` before proceeding.

@@ -7,7 +7,7 @@
 
 ## Definition
 
-1つのスキルは `knowledge/defines/skill/<skill-name>.md` として1ファイルにまとめ、
+1つのスキルは `doc/defines/skill/<skill-name>.md` として1ファイルにまとめ、
 以下のセクションを含める。
 
 - **Name**: スキル名（ファイル名と一致させる）
@@ -36,5 +36,5 @@
 ```
 
 ## Related
-- `knowledge/rules/claudecode_instructions.md`
+- `doc/rules/claudecode_instructions.md`
 - `flow/tasks/task-template.md`（`Related Definitions` セクション）

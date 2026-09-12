@@ -13,14 +13,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Validate knowledge structure
+      - name: Validate doc structure
         run: |
           echo "Checking required directories..."
-          test -d knowledge/defines || (echo "ERROR: knowledge/defines missing" && exit 1)
-          test -d knowledge/rules   || (echo "ERROR: knowledge/rules missing"   && exit 1)
-          test -d knowledge/adr     || (echo "ERROR: knowledge/adr missing"     && exit 1)
-          test -d flow/tasks        || (echo "ERROR: flow/tasks missing"        && exit 1)
-          test -d loop/feedback     || (echo "ERROR: loop/feedback missing"     && exit 1)
+          test -d doc/defines  || (echo "ERROR: doc/defines missing"  && exit 1)
+          test -d doc/rules    || (echo "ERROR: doc/rules missing"    && exit 1)
+          test -d doc/adr      || (echo "ERROR: doc/adr missing"      && exit 1)
+          test -d flow/tasks   || (echo "ERROR: flow/tasks missing"   && exit 1)
+          test -d loop/feedback || (echo "ERROR: loop/feedback missing" && exit 1)
           echo "Structure OK"
 
       - name: Validate task files

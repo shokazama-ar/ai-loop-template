@@ -29,5 +29,5 @@ loop/feedback/TASK-012-20250110.md
 ```
 
 ## Related
-- `knowledge/rules/claudecode_instructions.md`（LOOPセクション）
+- `doc/rules/claudecode_instructions.md`（LOOPセクション）
 - `loop/scripts/`

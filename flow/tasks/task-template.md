@@ -12,13 +12,13 @@
 
 ## Background
 <!-- なぜこのタスクが必要か。関連ADRや過去の決定があればリンクする -->
-- Related ADR: `knowledge/adr/YYYY-MM-DD-<title>.md` (任意)
+- Related ADR: `doc/adr/YYYY-MM-DD-<title>.md` (任意)
 
 ## Related Definitions
-<!-- このタスクが依存する knowledge/defines/ 配下の定義があれば記載する -->
-- Loop: `knowledge/defines/loop/<file>.md` (任意)
-- Skill: `knowledge/defines/skill/<file>.md` (任意)
-- Model: `knowledge/defines/model/<file>.md` (任意)
+<!-- このタスクが依存する doc/defines/ 配下の定義があれば記載する -->
+- Loop: `doc/defines/loop/<file>.md` (任意)
+- Skill: `doc/defines/skill/<file>.md` (任意)
+- Model: `doc/defines/model/<file>.md` (任意)
 
 ## Acceptance Criteria
 <!-- 完了条件を箇条書きで。CI green が必須条件 -->

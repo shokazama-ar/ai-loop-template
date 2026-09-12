@@ -10,19 +10,19 @@ Claude Code のようなAIエージェントが、人間の監督のもとで継
 
 | 領域 | ディレクトリ | 役割 |
 |---|---|---|
-| **STOCK** | `knowledge/` | プロジェクト全体の永続的な知識（ルール・定義・意思決定record） |
+| **STOCK** | `doc/` | プロジェクト全体の設計資料・永続的な知識（ルール・定義・意思決定record） |
 | **FLOW** | `flow/` | 今どのタスクに取り組んでいるかという動的なコンテキスト |
 | **EXECUTION** | `src/` | 実際のプロダクトコード |
 | **LOOP** | `loop/` | 実装後の検証とそのフィードバック |
 
-タスクは `flow/` → `src/` → `loop/` の順で流れ、`knowledge/` はその全工程を通じて
+タスクは `flow/` → `src/` → `loop/` の順で流れ、`doc/` はその全工程を通じて
 参照される土台という位置づけです。
 
 ## ディレクトリ構成
 
 ```
 .
-├── knowledge/              # STOCK: 長期的に有効な知識
+├── doc/                    # STOCK: 設計資料・長期的に有効な知識
 │   ├── rules/              #   エージェントへの指示・運用ルール
 │   ├── adr/                #   Architecture Decision Record（意思決定の記録）
 │   └── defines/            #   用語・仕様の定義集
@@ -44,20 +44,20 @@ Claude Code のようなAIエージェントが、人間の監督のもとで継
 
 1. `flow/tasks/task-template.md` をコピーして `flow/tasks/TASK-XXX-<slug>.md` を作成し、
    Goal・Acceptance Criteria・Steps を埋める。
-2. 関連する定義があれば `knowledge/defines/{loop,skill,model}/` を確認し、
-   なければ追記する。重要な設計判断は `knowledge/adr/` にADRを残す。
+2. 関連する定義があれば `doc/defines/{loop,skill,model}/` を確認し、
+   なければ追記する。重要な設計判断は `doc/adr/` にADRを残す。
 3. `src/` に実装する。
 4. `loop/scripts/` の検証を実行し、結果を `loop/feedback/` に記録する。
 5. ブランチを push し、`ai-validation.yml` がグリーンであることを確認する。
 6. タスクファイルの `Status` を `done` に更新する。
 
-詳細な運用ルールは [`knowledge/rules/claudecode_instructions.md`](knowledge/rules/claudecode_instructions.md)
+詳細な運用ルールは [`doc/rules/claudecode_instructions.md`](doc/rules/claudecode_instructions.md)
 を参照してください。
 
 ## CI
 
 `.github/workflows/ai-validation.yml` は以下を検証します。
 
-- `knowledge/{defines,rules,adr}`、`flow/tasks`、`loop/feedback` が存在すること
+- `doc/{defines,rules,adr}`、`flow/tasks`、`loop/feedback` が存在すること
 - `flow/tasks/*.md`（テンプレート自身を除く）が `# Task:` 見出しと `## Goal` セクションを
   持つこと
