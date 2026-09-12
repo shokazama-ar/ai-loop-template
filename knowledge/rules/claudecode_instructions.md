@@ -10,6 +10,10 @@ Your primary concern is correctness, clarity, and closing the feedback loop.
 - Treat files in `knowledge/` as long-lived, project-wide truth.
 - Before changing any rule or definition, record the rationale in `knowledge/adr/`.
 - Prefer explicit definitions in `knowledge/defines/` over ad-hoc assumptions.
+- Organize `knowledge/defines/` by domain:
+  - `loop/` — how the validation/feedback cycle in `loop/` works and what "done" means.
+  - `skill/` — reusable, step-by-step procedures for recurring work.
+  - `model/` — which class of model to use for which kind of task.
 
 ### FLOW — Dynamic task context (flow/)
 - Each task starts from a file in `flow/tasks/`.
