@@ -8,5 +8,5 @@
 - 単純な確認・定型チェックに留まる場合は、Haiku系に留めてコストを抑える
 
 ## Related
-- `ai/model-roles/role-to-model-mapping.md`
-- `ai/model-roles/model-switch-log.md`
+- `gen-ai/model-roles/role-to-model-mapping.md`
+- `gen-ai/model-roles/model-switch-log.md`

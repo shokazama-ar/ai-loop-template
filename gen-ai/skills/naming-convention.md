@@ -8,4 +8,4 @@
 - 例: `add-npm-dependency.md`、`deploy-to-staging.md`
 
 ## Related
-- `ai/skills/skill-file-format.md`
+- `gen-ai/skills/skill-file-format.md`

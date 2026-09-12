@@ -16,14 +16,14 @@ jobs:
       - name: Validate doc structure
         run: |
           echo "Checking required directories..."
-          test -d doc/rules            || (echo "ERROR: doc/rules missing"            && exit 1)
-          test -d doc/adr              || (echo "ERROR: doc/adr missing"              && exit 1)
-          test -d ai/loops             || (echo "ERROR: ai/loops missing"             && exit 1)
-          test -d ai/skills            || (echo "ERROR: ai/skills missing"            && exit 1)
-          test -d ai/model-roles       || (echo "ERROR: ai/model-roles missing"       && exit 1)
-          test -d flow/tasks           || (echo "ERROR: flow/tasks missing"           && exit 1)
-          test -d loop/feedback        || (echo "ERROR: loop/feedback missing"        && exit 1)
-          test -d data-models          || (echo "ERROR: data-models missing"          && exit 1)
+          test -d doc/rules          || (echo "ERROR: doc/rules missing"          && exit 1)
+          test -d doc/adr            || (echo "ERROR: doc/adr missing"            && exit 1)
+          test -d gen-ai/loops       || (echo "ERROR: gen-ai/loops missing"       && exit 1)
+          test -d gen-ai/skills      || (echo "ERROR: gen-ai/skills missing"      && exit 1)
+          test -d gen-ai/model-roles || (echo "ERROR: gen-ai/model-roles missing" && exit 1)
+          test -d flow/tasks         || (echo "ERROR: flow/tasks missing"         && exit 1)
+          test -d loop/feedback      || (echo "ERROR: loop/feedback missing"      && exit 1)
+          test -d data-models        || (echo "ERROR: data-models missing"        && exit 1)
           echo "Structure OK"
 
       - name: Validate task files

@@ -13,5 +13,5 @@
 - **Verification**: 成功したことをどう確認するか
 
 ## Related
-- `ai/skills/naming-convention.md`
-- `ai/skills/example-add-dependency.md`
+- `gen-ai/skills/naming-convention.md`
+- `gen-ai/skills/example-add-dependency.md`

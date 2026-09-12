@@ -15,10 +15,10 @@
 - Related ADR: `doc/adr/YYYY-MM-DD-<title>.md` (任意)
 
 ## Related Definitions
-<!-- このタスクが依存する ai/ 配下の定義があれば記載する -->
-- Loop: `ai/loops/<file>.md` (任意)
-- Skill: `ai/skills/<file>.md` (任意)
-- Model: `ai/model-roles/<file>.md` (任意)
+<!-- このタスクが依存する gen-ai/ 配下の定義があれば記載する -->
+- Loop: `gen-ai/loops/<file>.md` (任意)
+- Skill: `gen-ai/skills/<file>.md` (任意)
+- Model: `gen-ai/model-roles/<file>.md` (任意)
 
 ## Acceptance Criteria
 <!-- 完了条件を箇条書きで。CI green が必須条件 -->

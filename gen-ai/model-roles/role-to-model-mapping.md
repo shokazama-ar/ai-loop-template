@@ -13,4 +13,4 @@
 迷ったらSonnet系を既定値とする。
 
 ## Related
-- `ai/model-roles/escalation-policy.md`
+- `gen-ai/model-roles/escalation-policy.md`
